@@ -1,0 +1,6 @@
+{
+  "src": [
+    "pages/Index",
+    "web/page/WebPage"
+  ]
+}
