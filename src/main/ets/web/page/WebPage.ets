@@ -28,20 +28,22 @@ struct WebPage {
         .margin({ left: 10 })
         .backgroundColor(0xFFFFFF)
         .onClick(() => {
-          // this.onBackPress();
+          this.onBackPress();
+        })
+
+        Text(this.title) {
+        }
+        .onClick(() => {
           componentSnapshot.get("web-view", (error: Error, pixmap: image.PixelMap) => {
             checkWhiteScreen({
               imageMap: pixmap,
               compressRatio: 6,
               threshold: 95,
-              regionSize:5,
+              regionSize: 5,
               pointNum: 8, //检测点数 8*8
             });
           })
         })
-
-        Text(this.title) {
-        }
         .layoutWeight(1)
         .height(30)
         .width("100%")
