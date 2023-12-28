@@ -30,7 +30,6 @@ struct WebPage {
         .onClick(() => {
           this.onBackPress();
         })
-
         Text(this.title) {
         }
         .onClick(() => {
@@ -40,7 +39,8 @@ struct WebPage {
               compressRatio: 6,
               threshold: 95,
               regionSize: 5,
-              pointNum: 8, //检测点数 8*8
+              density:20,
+              color: 0xFFFFFFFF,
             });
           })
         })
